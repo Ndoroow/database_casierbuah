@@ -2,35 +2,35 @@
 
 INSERT INTO roles (id_role, nama_role, created_at, updated_at)
 VALUES
-(R1, 'Admin', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(R2, 'Supervisor', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(R3, 'Cashier', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(R4, 'Stock Keeper', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(R5, 'Customer', '2023-07-27 12:00:00', '2023-07-27 12:00:00');
+(1, 'Admin', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(2, 'Supervisor', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(3, 'Cashier', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(4, 'Stock Keeper', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(5, 'Customer', '2023-07-27 12:00:00', '2023-07-27 12:00:00');
 #2
 INSERT INTO users (id_user, id_role, username, password, blokir, remember_token, created_at, updated_at)
 VALUES
-(201, R1, 'admin', 'hashed_admin_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(202, R2, 'supervisor', 'hashed_supervisor_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(203, R3, 'cashier', 'hashed_cashier_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(204, R4, 'stockkeeper', 'hashed_stockkeeper_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(205, R5, 'customer1', 'hashed_customer1_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00');
+(201, 1, 'admin', 'hashed_admin_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(202, 2, 'supervisor', 'hashed_supervisor_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(203, 3, 'cashier', 'hashed_cashier_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(204, 4, 'stockkeeper', 'hashed_stockkeeper_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(205, 5, 'customer1', 'hashed_customer1_password', 0, NULL, '2023-07-27 12:00:00', '2023-07-27 12:00:00');
 #3
 INSERT INTO transaksis (id_transaksi, id_pelanggan, id_karyawan, status_bayar, tgl_transaksi, created_at, updated_at)
 VALUES
-(T1, 301, K1, 'Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(T2, 302, K2, 'Belum Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(T3, 303, K3, 'Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(T4, 304, K4, 'Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(T5, 305, K5, 'Belum Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00');
+(13, 301, 1, 'Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(14, 302, 2, 'Belum Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(15, 303, 3, 'Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(16, 304, 4, 'Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(17, 305, 5, 'Belum Lunas', '2023-07-27', '2023-07-27 12:00:00', '2023-07-27 12:00:00');
 #4
 INSERT INTO transaksis_details (id_transaksidetail, id_transaksi, id_barang, quantity, created_at, updated_at)
 VALUES
-(11, T1, B1, 5, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(12, T2, B2, 3, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(13, T3, B3, 2, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(14, T4, B4, 4, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(15, T5, B5, 1, '2023-07-27 12:00:00', '2023-07-27 12:00:00');
+(11, 13, 1, 5, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(12, 14, 2, 3, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(13, 15, 3, 2, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(14, 16, 4, 4, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(15, 17, 5, 1, '2023-07-27 12:00:00', '2023-07-27 12:00:00');
 #5
 INSERT INTO pelanggans (nama_lengkap, kode_pelanggan, id_pelanggan, alamat, kelurahan, kecamatan, kabupaten, kode_pos, email)
 VALUES
@@ -42,27 +42,27 @@ VALUES
 #6
 INSERT INTO karyawans (id_karyawan, id_user, nama_lengkap, alamat, email, telp, photo, created_at, updated_at)
 VALUES
-(K1, 201, 'John Doe', 'Jl. Merdeka No. 123', 'john.doe@example.com', '08123456789', 'john_doe.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(K2, 202, 'Jane Smith', 'Jl. Sudirman No. 456', 'jane.smith@example.com', '08765432123', 'jane_smith.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(K3, 203, 'Michael Johnson', 'Jl. Thamrin No. 789', 'michael.johnson@example.com', '08234567890', 'michael_johnson.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(K4, 204, 'Emily Brown', 'Jl. Gatot Subroto No. 1010', 'emily.brown@example.com', '081122334455', 'emily_brown.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(K5, 205, 'William Lee', 'Jl. Diponegoro No. 1111', 'william.lee@example.com', '089977665544', 'william_lee.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00');
+(1, 201, 'John Doe', 'Jl. Merdeka No. 123', 'john.doe@example.com', '08123456789', 'john_doe.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(2, 202, 'Jane Smith', 'Jl. Sudirman No. 456', 'jane.smith@example.com', '08765432123', 'jane_smith.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(3, 203, 'Michael Johnson', 'Jl. Thamrin No. 789', 'michael.johnson@example.com', '08234567890', 'michael_johnson.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(4, 204, 'Emily Brown', 'Jl. Gatot Subroto No. 1010', 'emily.brown@example.com', '081122334455', 'emily_brown.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(5, 205, 'William Lee', 'Jl. Diponegoro No. 1111', 'william.lee@example.com', '089977665544', 'william_lee.jpg', '2023-07-27 12:00:00', '2023-07-27 12:00:00');
 #7
 INSERT INTO barangs (id_barang, id_supplier, nama_barang, satuan, paket, quantity, keterangan, harga_jual, harga_beli, created_at, updated_at)
 VALUES
-(B1, 101, 'Apel', 'Kg', NULL, 100, 'Fresh green apples', 10000, 8000, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(B2, 102, 'Jeruk', 'Kg', NULL, 80, 'Sweet oranges', 8000, 6000, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(B3, 101, 'Mangga', 'Kg', NULL, 120, 'Juicy mangoes', 12000, 9000, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(B4, 103, 'Pisang', 'Kg', NULL, 70, 'Ripe bananas', 6000, 4500, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(B5, 104, 'Semangka', 'Buah', NULL, 1, 'Large watermelon', 20000, 16000, '2023-07-27 12:00:00', '2023-07-27 12:00:00');
+(1, 101, 'Apel', 'Kg', NULL, 100, 'Fresh green apples', 10000, 8000, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(2, 102, 'Jeruk', 'Kg', NULL, 80, 'Sweet oranges', 8000, 6000, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(3, 101, 'Mangga', 'Kg', NULL, 120, 'Juicy mangoes', 12000, 9000, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(4, 103, 'Pisang', 'Kg', NULL, 70, 'Ripe bananas', 6000, 4500, '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(5, 104, 'Semangka', 'Buah', NULL, 1, 'Large watermelon', 20000, 16000, '2023-07-27 12:00:00', '2023-07-27 12:00:00');
 #8
   INSERT INTO gambar_barang (id_gambarbarang, id_barang, gambar_barang, status_bayar, created_at, updated_at)
 VALUES
-(1, B1, 'apel.jpg', 'Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(2, B2, 'jeruk.jpg', 'Belum Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(3, B3, 'mangga.jpg', 'Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(4, B4, 'pisang.jpg', 'Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
-(5, B5, 'semangka.jpg', 'Belum Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00');
+(1, 1, 'apel.jpg', 'Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(2, 2, 'jeruk.jpg', 'Belum Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(3, 3, 'mangga.jpg', 'Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(4, 4, 'pisang.jpg', 'Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00'),
+(5, 5, 'semangka.jpg', 'Belum Lunas', '2023-07-27 12:00:00', '2023-07-27 12:00:00');
 #9
   INSERT INTO suppliers (id_supplier, nama_lengkap, alamat, kelurahan, kecamatan, kabupaten, kode_pos, email, telp, created_at, updated_at)
 VALUES
